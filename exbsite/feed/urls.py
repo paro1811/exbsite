@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.listFeed, name='lfeed'),
     path('<int:myid>/', views.echo, name='echo'),
     path('listFeed/', views.listFeed, name='listFeed'),
     path('postForm/', views.postForm, name='postForm'),

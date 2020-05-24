@@ -25,7 +25,8 @@ SECRET_KEY = 'ate3kpv^tm^(+1802zp3v!09r7^=!vt-e%*l8i+ydd3j&-0y5b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['46.101.112.50',
+                 'www.lets-connect.club']
 
 
 # Application definition
@@ -86,7 +87,7 @@ DATABASES = {
         'NAME': 'exdb',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
