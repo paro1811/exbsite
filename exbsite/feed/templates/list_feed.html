@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% load icons %}
+{% block content %}
+
+
+
+
+ <div style="width:65rem; display: inline-block;   height: 2.5rem;">  
+    <a href = '/feed/postForm/'><button class="btn btn-info" style="float: right;">Create Post</button></a>
+     
+ </div>
+
+ {% for post in posts_display %}
+  
+ <div class ="product-card">
+ <div class="carCard">
+ <div id="carouselExampleControls{{post.post_id}}" class="carousel slide" data-ride="carousel">
+    
+    <div class="carousel-inner" >
+       
+        {% for p in post.pics %}
+            {% if p.pic %}
+                <div class="carousel-item {% if p == post.pics.first %} active {% endif %}">
+                    .
+                    <img class=ImageClass src="..{{p.pic.url}}"> 
+
+                </div>   
+            {% endif %}                 
+        {% endfor %}
+       
+    </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls{{post.post_id}}" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls{{post.post_id}}" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+ <div class="card mb-3" >
+  <!-- <img class="card-img-top " src="https://cdn.wallpapersafari.com/2/11/DcdFqY.jpg" alt="Card image cap"> -->
+  <div class="card-title">
+    <table>
+        <tr>
+            <td> <h4>{{post.post_title}} </h4> </td>
+            <td onclick="">{% icon 'trash' %}</td>
+            <td>{% icon 'pencil' %}</td>
+        </tr>
+    </table>
+    
+  </div>
+
+  <div class="card-body">
+    <p class="card-text"><strong>{{ post.post_author}}</strong> </p>
+    <p class="card-text"> {{ post.post_date }} </p>
+    <p class="card-text"> Grade: <strong>{{ post.post_grade}}</strong> </p>
+    <h5 class="card-text"> email: <strong><i>{{ post.post_email}}</i></strong> </h5>
+   
+    <p class="card-text description"> {{ post.post_text }} </p>
+    <!--<p class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+  </div>
+</div>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock content %}

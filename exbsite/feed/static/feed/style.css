@@ -1,0 +1,114 @@
+
+body {background-image: url(https://data.whicdn.com/images/189057161/original.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    height: 8rem;
+     border:1px solid black;
+    background-image:url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-hand-painted-floral-pale-pink-literary-fresh-flat-banner-image_170220.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   margin-bottom: 1rem;
+}
+
+.heading{
+    margin-left: 5rem;
+    margin-top: 2rem;
+   height:3rem;
+ 
+
+}
+
+
+.product-card{
+    height:620px;
+    margin-bottom: 1rem;
+    width:900px;
+    display:flex;
+    flex-direction: row;
+    border:1px solid black;
+    background-image: url("https://media.istockphoto.com/photos/white-paper-texture-background-picture-id947207308?k=6&m=947207308&s=612x612&w=0&h=XFqQ-kmiEyjjmTZT5c1O0JXA8qhnh2FmyEv8yLaOsfU=");
+
+}
+
+
+
+.product-card > .card {
+   height:600px;
+   width:500px;
+   margin-right: 2rem;
+  background-image: url("https://media.istockphoto.com/photos/white-paper-texture-background-picture-id947207308?k=6&m=947207308&s=612x612&w=0&h=XFqQ-kmiEyjjmTZT5c1O0JXA8qhnh2FmyEv8yLaOsfU=");
+  margin-top: 0.5rem;
+}
+
+.product-card > .card-body{
+   
+   height:250px;
+   width:400px;
+
+ 
+}
+
+.card .card-body .card-text {
+    font-size: 14px;
+    height:auto;
+}
+
+.description {
+    font-size: 10px;
+  height:20rem;
+  border-top: 1px solid gray;
+  margin-top: 0.5rem;
+}
+
+.product-card > .carCard{
+    
+    height:275px;
+    width:400px;
+    margin-top: 1rem;
+  
+    
+}
+
+.product-card >  .carCard > .carousel  {
+    
+    height: 275px;
+    width: 300px;
+    margin-left: 2rem; 
+    margin-top: 0.3rem;
+   
+}
+.product-card > .carCard > .carousel > .carousel-inner  {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 250px;
+    width: 270px;
+   
+}
+
+.ImageClass{
+    position: absolute;
+    max-height: 900%;
+    width:auto;
+    max-width: 900%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+
+}
+
+table {
+ 
+  
+  width: 380px;
+}
+
+td {
+  padding: 5px 0;
+}

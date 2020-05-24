@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>image 1</title> 
+<body> 
+  
+    {% for image in Images %} 
+            <div class="col-md-4">
+                <img src="..{{ image.pic.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+            </div> 
+    {% endfor %} 
+  
+</body> 
+</html> 
+
+{% endblock content %}
