@@ -16,7 +16,7 @@ class PostForm(forms.Form):
   grade = forms.CharField(max_length =30, widget=forms.Select(choices=GRADES))
   email = forms.EmailField(max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Enter your email address...'}))
   title = forms.CharField(max_length = 50, widget=forms.TextInput(attrs={'placeholder': 'Enter the name of your product...'}))
-  text = forms.CharField(label = 'Description', max_length=1000, widget=forms.Textarea(attrs={'placeholder': 'Enter your product description here...','cols': 200,
+  text = forms.CharField(label = 'Description', max_length=5000, widget=forms.Textarea(attrs={'placeholder': 'Enter your product description here...','cols': 200,
         'rows': 5,'style': 'width: 100%'}))
   pic = forms.ImageField(label = 'Choose an image (You can choose a maximum of upto 3 images).')
   pic1 = forms.ImageField(label = '', required = False)
