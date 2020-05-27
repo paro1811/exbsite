@@ -14,7 +14,7 @@ def echo(request, myid):
 	return HttpResponse("You said %s" %myid)
 
 def listFeed(request):
-    posts_db = Post.objects.all() 
+    posts_db = Post.objects.all().order_by('-post_id') 
     posts_display = []
     #output = ''
     for p in posts_db:
@@ -35,12 +35,19 @@ def postForm(request):
         if form.is_valid():
             p = Post(post_title= form.cleaned_data['title'], post_text = form.cleaned_data['text'] , post_date = datetime.datetime.now(), post_author= form.cleaned_data['name']  , post_grade= form.cleaned_data['grade']  , post_email= form.cleaned_data['email'] )
             p.save()
+            
             pic = Picture(post=p, pic=request.FILES['pic'])
             pic.save()
+            pic.shrink_image()
+            
             pic1 = Picture(post=p, pic=request.FILES.get('pic1', ''))
             pic1.save()
+            pic1.shrink_image()
+            
             pic2 = Picture(post=p, pic=request.FILES.get('pic2', ''))
             pic2.save()
+            pic2.shrink_image()
+            
             messages.success(request, 'Your post has been successfully posted!')
             return HttpResponseRedirect('/feed/listFeed/')
     else:
