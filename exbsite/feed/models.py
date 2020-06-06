@@ -44,15 +44,11 @@ class Picture(models.Model):
         return self.pic.name
 
     def shrink_image(self):
-        print('----> in shrink_image')
         if self.pic:
             img_field = self.pic
             img_path = str(img_field.name)
             img_name = img_path[img_path.find('/')+1:]
-            print(img_path)
-            print(img_name)
             img = Image.open(img_field)
-            print(img)
             img.thumbnail((400,400))
             buffer = BytesIO()
             img.save(fp=buffer,format='jpeg')

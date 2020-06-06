@@ -38,15 +38,15 @@ def postForm(request):
             
             pic = Picture(post=p, pic=request.FILES['pic'])
             pic.save()
-            pic.shrink_image()
+            #pic.shrink_image()
             
             pic1 = Picture(post=p, pic=request.FILES.get('pic1', ''))
             pic1.save()
-            pic1.shrink_image()
+            #pic1.shrink_image()
             
             pic2 = Picture(post=p, pic=request.FILES.get('pic2', ''))
             pic2.save()
-            pic2.shrink_image()
+            #pic2.shrink_image()
             
             messages.success(request, 'Your post has been successfully posted!')
             return HttpResponseRedirect('/feed/listFeed/')
