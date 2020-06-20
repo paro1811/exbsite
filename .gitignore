@@ -2,3 +2,4 @@ exbsite/media/pic_folder/
 exbsite/exbsite/__pycache__/
 exbsite/feed/__pycache__/
 exbsite/feed/migrations/__pycache__/
+exbsite/__pycache__/
